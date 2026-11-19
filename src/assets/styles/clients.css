@@ -1,0 +1,87 @@
+.clients-section {
+  position: relative;
+  padding: 110px 0 120px;
+  background: #0b1224;
+  color: #fff;
+  overflow: hidden;
+}
+.clients-heading {
+  text-align: center;
+  padding: 0 20px;
+  margin-bottom: 65px;
+}
+.clients-heading h2 {
+  color: #fff;
+}
+.changing-word {
+  display: inline-block;
+  color: #95e62f;
+  animation: wordIn 0.5s ease;
+}
+@keyframes wordIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.client-marquee {
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+}
+.client-track {
+  width: max-content;
+  display: flex;
+  gap: 18px;
+  animation: marquee 28s linear infinite;
+}
+.clients-section:hover .client-track {
+  animation-play-state: paused;
+}
+.client-logo {
+  width: 190px;
+  height: 110px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.09),
+    rgba(255, 255, 255, 0.03)
+  );
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+.client-logo span {
+  font-size: 20px;
+  font-weight: 800;
+  color: #dce4ef;
+  letter-spacing: -0.02em;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(calc(-50% - 9px));
+  }
+}
+@media (max-width: 620px) {
+  .clients-section {
+    padding: 80px 0;
+  }
+  .client-logo {
+    width: 150px;
+    height: 90px;
+  }
+  .clients-heading {
+    margin-bottom: 45px;
+  }
+}

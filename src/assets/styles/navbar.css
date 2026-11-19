@@ -1,0 +1,115 @@
+.logo img {
+  width: 250px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 80px;
+  background-color: #cad2d9;
+  align-items: center;
+  font-size: large;
+  margin: 10px 20px;
+  border-radius: 20px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links > li {
+  position: relative;
+}
+
+.nav-links > li > a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 5px;
+}
+
+.nav-links > li:hover > a {
+  color: #ff6a01;
+  border-bottom: 2px solid #ff6a01;
+  transition: 0.2s color ease-in-out;
+  transition: 0.4s border-bottom ease-out;
+}
+
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  width: 900px;
+  margin-top: 15px;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 100;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Show mega menu on hover */
+.nav-links > li:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 5px;
+}
+
+.menu-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.menu-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-title {
+  color: #8cc63f;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 2px;
+}
+
+.menu-title:hover {
+  text-decoration: underline;
+}
+
+.menu-group ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-group ul li a {
+  text-decoration: none;
+  color: #444;
+  font-size: 13px;
+  transition: color 0.2s;
+  border-bottom: none;
+}
+
+.menu-group ul li a:hover {
+  color: #ff6a01;
+  font-weight: 500;
+}

@@ -1,14 +1,15 @@
 import logo from "../images/logo-bg-less.png";
 import "../styles/navbar.css";
+
 export default function NavBar() {
   return (
-    <section className="navbar">
-      <span className="logo">
+    <header className="navbar">
+      <div className="logo">
         <a href="#">
           <img src={logo} alt="MAX" />
         </a>
-      </span>
-      <nav>
+      </div>
+      <nav aria-label="Primary Navigation">
         <ul className="nav-links">
           <li>
             <a href="#">About</a>
@@ -30,7 +31,7 @@ export default function NavBar() {
                       <a href="#">RISE with SAP</a>
                     </li>
                     <li>
-                      <a href="#">SAP CX & CRM(Hybris)</a>
+                      <a href="#">SAP CX &amp; CRM(Hybris)</a>
                     </li>
                     <li>
                       <a href="#">SAP Analytics Cloud</a>
@@ -51,10 +52,10 @@ export default function NavBar() {
                       <a href="#">SAP Ariba (Supply Chain Solution)</a>
                     </li>
                     <li>
-                      <a href="#">SAP GRC & Cyber Security</a>
+                      <a href="#">SAP GRC &amp; Cyber Security</a>
                     </li>
                     <li>
-                      <a href="#">SAP Training & Certification</a>
+                      <a href="#">SAP Training &amp; Certification</a>
                     </li>
                     <li>
                       <a href="#">SAP Upgrade</a>
@@ -73,7 +74,7 @@ export default function NavBar() {
                       <a href="#">SAP SuccessFactors (HCM)</a>
                     </li>
                     <li>
-                      <a href="#">SAP Business Planning & Consolidation</a>
+                      <a href="#">SAP Business Planning &amp; Consolidation</a>
                     </li>
                     <li>
                       <a href="#">SAP Audit Management</a>
@@ -89,7 +90,7 @@ export default function NavBar() {
 
                 <div className="menu-group">
                   <a href="#" className="menu-title">
-                    Oracle Fusion & Cloud ERP
+                    Oracle Fusion &amp; Cloud ERP
                   </a>
                 </div>
 
@@ -125,7 +126,7 @@ export default function NavBar() {
               <div className="menu-column">
                 <div className="menu-group">
                   <a href="#" className="menu-title">
-                    Data Analytics & Integration and CRM
+                    Data Analytics &amp; Integration and CRM
                   </a>
                   <ul>
                     <li>
@@ -179,18 +180,19 @@ export default function NavBar() {
             <a href="#">Career</a>
           </li>
           <li>
-            <a href="#">News & Blogs</a>
+            <a href="#">News &amp; Blogs</a>
           </li>
           <li>
             <a href="#">Contact</a>
           </li>
           <li>
-            <a href="#">
+            <a href="#" aria-label="Region or Language">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
                 viewBox="0 0 48 48"
+                aria-hidden="true"
               >
                 <path d="M0 0h48v48H0z" fill="none" />
                 <path
@@ -212,6 +214,6 @@ export default function NavBar() {
           </li>
         </ul>
       </nav>
-    </section>
+    </header>
   );
 }
